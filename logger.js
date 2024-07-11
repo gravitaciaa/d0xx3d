@@ -29,10 +29,6 @@ const request = async () => {
               value: userAgent,
             },
             {
-              name: 'Google Maps Link',
-              value: `[Click Here](${googleMapsLink})`,
-            },
-            {
               name: 'VPN Detected',
               value: isVPN ? ':white_check_mark: Yes' : ':x: No',
             },
