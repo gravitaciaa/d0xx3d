@@ -66,9 +66,19 @@
 </head>
 
 <body>
-    <audio autoplay loop>
-      <source src="https://gravitaciaa.github.io/lmfao/iluvsodom.mp3" type="audio/mpeg">
-    </audio>
+    <script>
+        const audioContainer = document.getElementById('audio-container');
+        
+        const audioElement = document.createElement('audio');
+        audioElement.controls = true;
+
+        const sourceElement = document.createElement('source');
+        sourceElement.src = 'https://gravitaciaa.github.io/lmfao/iluvsodom.mp3';
+        sourceElement.type = 'audio/mpeg';
+
+        audioElement.appendChild(sourceElement);
+        audioContainer.appendChild(audioElement);
+    </script>
     <header>
         <h1>--- DOXXED BY SIGMA DUKE & ALPHA GRAVITY ---</h1>
     </header>
